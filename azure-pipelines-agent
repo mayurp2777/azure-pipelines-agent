@@ -1,0 +1,14 @@
+trigger:
+- main
+
+pool:
+  name: window
+  demands:
+  - Agent.Name -equals window
+
+steps:
+- script: echo Hello from Windows Self-Hosted Agent
+  displayName: 'Hello World'
+
+- script: hostname
+  displayName: 'Check Hostname'
